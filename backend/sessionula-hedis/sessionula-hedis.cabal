@@ -1,0 +1,30 @@
+cabal-version: 2.2
+name: sessionula-hedis
+version: 0.1.0
+build-type: Simple
+license: MIT
+license-file: LICENSE
+             
+library
+  hs-source-dirs: src
+  default-language: Haskell2010
+  exposed-modules: Sessionula.Backend.Hedis
+  build-depends: base
+               , bytestring
+               , hedis
+               , sessionula
+               , time
+
+test-suite spec
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  default-language: Haskell2010
+  hs-source-dirs: test
+  other-modules: Sessionula.Backend.HedisSpec
+  build-depends: base
+               , hedis
+               , hspec
+               , hspec-discover
+               , sessionula
+               , sessionula-hedis
+               

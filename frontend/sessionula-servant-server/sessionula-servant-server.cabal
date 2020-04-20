@@ -1,0 +1,57 @@
+cabal-version: 2.2
+name: sessionula-servant-server
+version: 0.1.0
+build-type: Simple
+license: MIT
+license-file: LICENSE
+
+library
+  hs-source-dirs: src
+  default-language: Haskell2010
+  exposed-modules: Sessionula.Frontend.Servant.Server
+  build-depends: base
+               , servant-server
+               , sessionula
+               , sessionula-servant
+               , sessionula-wai
+
+test-suite spec
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  hs-source-dirs: test
+  default-language: Haskell2010
+  other-modules: Sessionula.Frontend.Servant.ServerSpec
+  build-depends: base
+               , bytestring
+               , case-insensitive
+               , hspec
+               , hspec-discover
+               , http-client
+               , lens
+               , servant-server
+               , sessionula
+               , sessionula-servant-server
+               , sessionula-wai
+               , wai
+               , warp
+               , wreq
+
+test-suite readme
+  type: exitcode-stdio-1.0
+  main-is: README.lhs
+  ghc-options: -Wall -pgmL markdown-unlit
+  build-tool-depends: markdown-unlit:markdown-unlit
+  default-language: Haskell2010
+  build-depends: base
+               , bytestring
+               , hedis
+               , http-types
+               , servant-server
+               , sessionula
+               , sessionula-file
+               , sessionula-hasql
+               , sessionula-hedis
+               , sessionula-servant-server
+               , sessionula-wai
+               , wai
+               , warp

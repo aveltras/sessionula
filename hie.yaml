@@ -1,0 +1,35 @@
+cradle:
+  multi:
+
+    - path: "./sessionula/src"
+      config: { cradle: {cabal: {component: "sessionula"}} }
+    - path: "./sessionula/test"
+      config: { cradle: {cabal: {component: "sessionula:spec"}} }
+
+    - path: "./backend/sessionula-file/src"
+      config: { cradle: {cabal: {component: "sessionula-file"}} }
+    - path: "./backend/sessionula-file/test"
+      config: { cradle: {cabal: {component: "sessionula-file:spec"}} }
+
+    - path: "./backend/sessionula-hasql/src"
+      config: { cradle: {cabal: {component: "sessionula-hasql"}} }
+    - path: "./backend/sessionula-hasql/test"
+      config: { cradle: {cabal: {component: "sessionula-hasql:spec"}} }
+
+    - path: "./backend/sessionula-hedis/src"
+      config: { cradle: {cabal: {component: "sessionula-hedis"}} }
+    - path: "./backend/sessionula-hedis/test"
+      config: { cradle: {cabal: {component: "sessionula-hedis:spec"}} }
+
+    - path: "./frontend/sessionula-servant/src"
+      config: { cradle: {cabal: {component: "sessionula-servant"}} }
+
+    - path: "./frontend/sessionula-servant-server/src"
+      config: { cradle: {cabal: {component: "sessionula-servant-server"}} }
+    - path: "./frontend/sessionula-servant-server/test"
+      config: { cradle: {cabal: {component: "sessionula-servant-server:spec"}} }
+
+    - path: "./frontend/sessionula-wai/src"
+      config: { cradle: {cabal: {component: "sessionula-wai"}} }
+    - path: "./frontend/sessionula-wai/test"
+      config: { cradle: {cabal: {component: "sessionula-wai:spec"}} }
