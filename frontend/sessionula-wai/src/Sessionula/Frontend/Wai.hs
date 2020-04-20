@@ -38,7 +38,6 @@ extractSession request =
 
 middleware :: Session.Manager -> SetCookie -> CsrfSettings -> Middleware
 middleware (Session.Manager manager) cookieSettings csrfSettings app request respond = do
-  print $ requestHeaders request
   fmap snd $ manager maybeToken $ \sessionHandle -> do
     checkCsrf csrfSettings request sessionHandle >>= \case
       False -> respond $ csrfErrorResponse csrfSettings $ request
