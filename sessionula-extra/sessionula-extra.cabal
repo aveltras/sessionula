@@ -1,0 +1,17 @@
+cabal-version: 2.2
+name: sessionula-extra
+version: 0.1.0
+build-type: Simple
+license: MIT
+license-file: LICENSE
+            
+library
+  hs-source-dirs: src
+  default-language: Haskell2010
+  exposed-modules: Sessionula.Extra
+  build-depends: base
+               , bytestring
+               , cereal
+               , microlens
+               , mtl
+               , sessionula

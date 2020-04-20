@@ -25,6 +25,7 @@ let
   
   packages = {
     sessionula = ./sessionula;
+    sessionula-extra = ./sessionula-extra;
     sessionula-servant = ./frontend/sessionula-servant;
     sessionula-servant-server = ./frontend/sessionula-servant-server;
     sessionula-wai = ./frontend/sessionula-wai;

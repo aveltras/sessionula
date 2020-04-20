@@ -6,6 +6,9 @@ cradle:
     - path: "./sessionula/test"
       config: { cradle: {cabal: {component: "sessionula:spec"}} }
 
+    - path: "./sessionula-extra/src"
+      config: { cradle: {cabal: {component: "sessionula-extra"}} }
+
     - path: "./backend/sessionula-file/src"
       config: { cradle: {cabal: {component: "sessionula-file"}} }
     - path: "./backend/sessionula-file/test"
