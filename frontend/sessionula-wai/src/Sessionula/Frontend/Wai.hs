@@ -4,9 +4,11 @@
 
 module Sessionula.Frontend.Wai
  ( defaultCsrfSettings
+ , CsrfSettings(..)
  , defaultSessionCookie
  , extractSession
  , middleware
+ , SetCookie(..)
  , module Web.Cookie
  ) where
 
